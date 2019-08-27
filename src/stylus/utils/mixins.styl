@@ -1,0 +1,75 @@
+// Project mixins
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Media
+//////////////////////////////////////////////////////
+// Breackpoins in stylus/utils/variables.styl
+
+
+$lg()
+  @media screen and (min-width: $breackpoints.lg)
+    {block}
+
+$not-lg()
+  @media screen and (max-width: $breackpoints.sm-max)
+    {block}
+
+$sm-min-not-lg()
+  @media screen and (min-width: $breackpoints.sm) and (max-width: $breackpoints.sm-max)
+    {block}
+
+$not-xs()
+  @media screen and (min-width: $breackpoints.sm)
+    {block}
+
+
+// Elements
+//////////////////////////////////////////////////////
+
+// Size )
+$size($width, $height)
+  width $width
+  height $height
+
+
+// Links
+$link-style($color, $color-hover)
+  will-change: color;
+  $transition-default(color)
+
+  &,
+  &:focus
+    color $color
+
+  &:hover,
+  &:active
+    color $color-hover
+
+
+$btn-color($color, $background)
+  background-color $background
+  color $color
+  will-change background;
+  $transition-default(background)
+
+  &:hover,
+  &:active
+    background-color darken($background, $fade-percent)
+    color $color
+
+
+// Effects
+//////////////////////////////////////////////////////
+
+// Default transitions
+
+$transition-default($property)
+  transition $property $transition.duration $transition.timing-function $transition.delay
+
+$transitions-default()
+  list = "";
+  for property in arguments
+    list = list + property + ' ' + $transition.duration  + ' ' + $transition.timing-function  + ' ' + $transition.delay + ', '
+  transition unquote(substr(list, 0, length(list) - 2))

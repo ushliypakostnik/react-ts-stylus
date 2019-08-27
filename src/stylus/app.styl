@@ -1,0 +1,20 @@
+@import '/utils/variables'
+@import '/utils/mixins'
+
+.media-test
+  +$lg()
+    width 1000px
+
+.size-test
+  $size(100px, 20px)
+
+.link-test
+  $link-style(#f00, #f00);
+
+.transition-test
+  $transition-default(color)
+
+.transitions-test
+  $transitions-default(color, background, border-color)
+
+
