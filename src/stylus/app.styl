@@ -1,5 +1,14 @@
 @import '/utils/variables'
 @import '/utils/mixins'
+@import '/utils/animations'
+@import '/utils/placeholders'
+
+@import '/core/typography'
+@import '/core/base'
+@import '/core/utilities'
+
+
+// Test styles
 
 .media-test
   +$lg()
@@ -17,4 +26,6 @@
 .transitions-test
   $transitions-default(color, background, border-color)
 
+.placeholders-test
+  @extends $very-long-letters-protection
 

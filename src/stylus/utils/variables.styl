@@ -8,7 +8,9 @@
 
 $size = 20px
 
-$input_height = $size * 2
+$input = {
+  height: $size * 2
+}
 
 
 // Breackpoints
@@ -110,16 +112,21 @@ $color['border'] = $color.gray
 
 // Roundings
 
-$border_radius = {
-  small: 2px,
-  large: 4px
+$border = {
+  radius: {
+    small: 2px,
+    large: 4px
+  },
+  color: $color.border
 }
 
 // Buttons paddings
 
-$btn_padding = {
-  base: {
-    horizontal: 6px,
-    vertical: $size * 1.5
+$btn = {
+  padding: {
+    base: {
+      horizontal: 6px,
+      vertical: $size * 1.5
+    }
   }
 }

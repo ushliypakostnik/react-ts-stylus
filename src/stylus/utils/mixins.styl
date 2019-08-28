@@ -24,6 +24,10 @@ $not-xs()
   @media screen and (min-width: $breackpoints.sm)
     {block}
 
+$xs()
+  @media screen and (max-width: $breackpoints.xs-max)
+    {block}
+
 
 // Elements
 //////////////////////////////////////////////////////
@@ -36,7 +40,6 @@ $size($width, $height)
 
 // Links
 $link-style($color, $color-hover)
-  will-change: color;
   $transition-default(color)
 
   &,
@@ -51,7 +54,6 @@ $link-style($color, $color-hover)
 $btn-color($color, $background)
   background-color $background
   color $color
-  will-change background;
   $transition-default(background)
 
   &:hover,
@@ -66,10 +68,12 @@ $btn-color($color, $background)
 // Default transitions
 
 $transition-default($property)
+  will-change $property;
   transition $property $transition.duration $transition.timing-function $transition.delay
 
 $transitions-default()
   list = "";
   for property in arguments
-    list = list + property + ' ' + $transition.duration  + ' ' + $transition.timing-function  + ' ' + $transition.delay + ', '
-  transition unquote(substr(list, 0, length(list) - 2))
+    list = join(', ', list, join(' ', property, $transition.duration, $transition.timing-function, $transition.delay));
+  will-change unquote(join(', ', arguments));
+  transition unquote(substr(list, 2, length(list) - 2))
