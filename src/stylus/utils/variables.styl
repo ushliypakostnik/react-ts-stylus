@@ -6,10 +6,10 @@
 // Sizes
 //////////////////////////////////////////////////////
 
-$size = 20px
+$gutter = 20px
 
 $input = {
-  height: $size * 2
+  height: $gutter * 2
 }
 
 
@@ -94,6 +94,7 @@ $color['success'] = $color.green
 // Shadows
 
 $color['shadow'] = rgba($color.black, 0.15)
+$shadow['color'] = $color.shadow
 
 // Functional
 
@@ -125,8 +126,8 @@ $border = {
 $btn = {
   padding: {
     base: {
-      horizontal: 6px,
-      vertical: $size * 1.5
+      horizontal: $gutter * 1.5,
+      vertical: 6px
     }
   }
 }

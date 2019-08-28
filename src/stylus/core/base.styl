@@ -71,7 +71,7 @@ button
   cursor pointer
   border none
   border-radius $border.radius.large
-  padding $btn.padding.base.horizontal $btn.padding.base.vertical
+  padding $btn.padding.base.vertical $btn.padding.base.horizontal
   $btn-color($color.white, $color.primary)
   $text($font-family.sans, $font-size.normal, $font-weight.sans.regular)
 
@@ -82,7 +82,7 @@ input
   height $input.height;
   border 1px solid $color.border
   border-radius $border.radius.base
-  padding 0 $size / 2
+  padding 0 $gutter / 2
   $text($font-family.sans, $font-size.normal, $font-weight.sans.regular)
 
 
@@ -130,7 +130,7 @@ iframe
 
 /* Let's get this party started */
 ::-webkit-scrollbar
-    width $size / 2
+    width $gutter / 2
 
 /* Track */
 ::-webkit-scrollbar-track
