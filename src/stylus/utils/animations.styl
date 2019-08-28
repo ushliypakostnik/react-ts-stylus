@@ -8,8 +8,8 @@ $animations()
   animations = ""
   for a in arguments
     animations = join(', ', animations, a);
-  will-change: contents;
   animation unquote(substr(animations, 2, length(animations)))
+
 
 // Keyframes examples
 //////////////////////////////////////////////////////
