@@ -11,7 +11,7 @@ html
 
 body
   min-height 100%
-  color $color.text
+  color $color.text.normal
   background $color.white
   margin 0
   padding 0
@@ -79,16 +79,18 @@ button
 // Controls
 
 input
-  height $input.height;
+textarea
   border 1px solid $color.border
-  border-radius $border.radius.base
-  padding 0 $gutter / 2
+  border-radius $border.radius.small
+  padding 0 ($gutter / 2)
   $text($font-family.sans, $font-size.normal, $font-weight.sans.regular)
 
+input
+  height $input.height;
 
 textarea
-  width 100%
-  max-width 100%
+  display: block
+  resize: none
 
 
 // Lists
@@ -138,7 +140,7 @@ iframe
 
 /* Handle */
 ::-webkit-scrollbar-thumb
-    background: $color.text
+    background: $color.text.normal
 
 // Customize Placeholder
 //////////////////////////////////////////////////////

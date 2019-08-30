@@ -68,7 +68,7 @@ $text($font-family-text, $font-size-text, $font-weight-text)
   if $font-size-text == $font-size.small
     line-height $line-height.small
   if $font-size-text == $font-size.xsmall
-    line-height $line-height_xsmall
+    line-height $line-height.xsmall
   else
     line-height ceil($font-size-text * $line-height.base)
 
@@ -77,7 +77,7 @@ $text($font-family-text, $font-size-text, $font-weight-text)
 
 // Regular paragraph
 p
-  color $color.text
+  color $color.text.normal
   margin-bottom $gutter
   $text($font-family.sans, $font-size.small, $font-weight.sans.regular)
 
@@ -93,23 +93,23 @@ h1
     $text($font-family.sans, $font-size.normal, $font-weight.sans.bold)
 
 h2
-  $text($font-family.sans, $font-size.normal, $font-weight.sans.regular)
+  $text($font-family.sans, $font-size.large, $font-weight.sans.regular)
 
 h3
-  $text($font-family.sans, $font-size.small, $font-weight.sans.regular)
+  $text($font-family.sans, $font-size.normal, $font-weight.sans.regular)
 
 h4
-  $text($font-family.sans, round($font-size.small * 0.9), $font-weight.sans.bold)
+  $text($font-family.sans, $font-size.small, $font-weight.sans.bold)
 
 h5
-  $text($font-family.sans, round($font-size.small * 0.75), $font-weight.sans.regular)
+  $text($font-family.sans, $font-size.xsmall, $font-weight.sans.bold)
 
 h6
-  $text($font-family.sans, round($font-size.xsmall * 0.74), $font-weight.sans.regular)
+  $text($font-family.sans, $font-size.xsmall, $font-weight.sans.regular)
 
 h1, h2, h3
   &:first-child
     margin-top 0
 
 h1, h2, h3, h4, h5, h6
-  color $color.text
+  color $color.text.normal
