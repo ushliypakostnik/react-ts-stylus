@@ -48,7 +48,7 @@ $size($width, $height)
 
 
 // Links
-$link-style($color, $color-hover)
+$link-color($color, $color-hover)
   $transition-default(color)
 
   &,
@@ -59,6 +59,7 @@ $link-style($color, $color-hover)
   &:active
     color $color-hover
 
+// Buttons
 
 $btn-color($color, $background)
   background-color $background
@@ -69,7 +70,6 @@ $btn-color($color, $background)
   &:active
     background-color darken($background, $fade-percent)
     color $color
-
 
 $btn-transparent-color($color)
   background-color transparent
